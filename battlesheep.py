@@ -44,14 +44,20 @@ class board:
         self.board = [[hexagon() for i in range(MAX_BOARD_DIMENSION)] for j in range(MAX_BOARD_DIMENSION)]]
 
     get_available_neighbours( x, y):
-        available_neighbours = None
+        available_neighbours = []
 
         for vector in directions: 
-            neighbour_coordinates = [x+y for x,y in zip([x,y],vector)]
-            if neighbour_coordinates[ABSCISSA] < 0  or neighbour_coordinates[ORDINATE] < 0:
-                continue
+            distance = 1
+            possible_move = [x+y for x,y in zip([x,y],vector)]
+            while
+            vector = map(lambda x: x * distance, vector)
+            possible_move = [x+y for x,y in zip([x,y],vector)]
+
             hexagon = self.board[neighbour_coordinates[ABSCISSA], neighbour_coordinates[ORDINATE]]
-            if hexagon.get
+            if hexagon.check_content == hexagon.EMPTY:
+                possible_move = neighbour_coordinates
+                while hexagon.check_content == hexagon.EMPTY:
+
 
 
 
